@@ -1,5 +1,11 @@
 # openFFS
-*An Open Source web application written purely in PHP for taking Faculty Feedbacks from the students.*  <br />
+> A WebApp to collect Semisterly feedbacks from the students.
+
+## Introduction
+[TODO]
+
+## Install
+[TODO]
 
 
 
