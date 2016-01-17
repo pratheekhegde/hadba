@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html ng-app="openFFSApp">
+<head>
+  <base href="/">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title ng-bind="ngMeta.title"></title>
+
+  <!--  Material Icons
+        https://google.github.io/material-design-icons/#icon-font-for-the-web
+  -->
+  <link rel="stylesheet" href="/css/material-design-icons.css">
+
+  <!-- Resize Flipclock -->
+  <link rel="stylesheet" href="/css/flipclock.css">
+
+
+  <!-- Bower dependencies wiredep will add it automatically here! dont touch below-->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+  <link rel="stylesheet" href="bower_components/flipclock/compiled/flipclock.css" />
+  <!-- endbower -->
+
+  <!-- Bower dependencies>
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/ngMeta/src/ngMeta.js"></script>
+  <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+  <script src="bower_components/flipclock/compiled/flipclock.js"></script>
+  <!-- endbower -->
+
+  <!-- Application Code Starts Here-->
+  <script src="modules/app.js"></script>
+
+  <!-- Student Files -->
+  <script src="modules/student/controllers/feedbackFinish.controller.js"></script>
+  <script src="modules/student/controllers/feedbackForm.controller.js"></script>
+  <script src="modules/student/controllers/studentHome.controller.js"></script>
+  <script src="modules/student/controllers/subjectList.controller.js"></script>
+  <script src="modules/student/controllers/studentSidenav.controller.js"></script>
+
+</head>
+<body layout="row" ng-controller="studentSidenavController" ng-cloak>
+
+  <!-- Sidenav -->
+  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-10dp md-primary" md-component-id="studentLeftSidenav" md-is-locked-open="$mdMedia('gt-sm')">
+    <div layout="row" layout-align="center" layout-margin>
+      <img src="images/sode-logo.png"></img>
+    </div>
+    <div layout="row" layout-align="center">
+      <h3 class="md-subheading">Department of CSE, SMVITM.</h3>
+    </div>
+
+    <md-list>
+           <md-divider></md-divider>
+          <md-list-item>
+            <md-icon class="md-default-theme" class="material-icons">&#xE878;</md-icon>
+            <p>Events</p>
+            <md-icon class="md-secondary">2</md-icon>
+          </md-list-item>
+          <md-list-item>
+            <md-icon class="md-default-theme" class="material-icons">&#xE251;</md-icon>
+            <p>Photos</p>
+            <md-icon class="md-secondary">2</md-icon>
+          </md-list-item>
+          <md-divider></md-divider>
+          <md-subheader class="md-no-sticky">Pages</md-subheader>
+          <md-list-item>
+            <md-icon class="md-default-theme" class="material-icons">&#xE7F9;</md-icon>
+            <p>Pages Feed</p>
+            <div class="md-secondary">2</div>
+          </md-list-item>
+          <md-list-item>
+            <md-icon class="md-default-theme" class="material-icons">&#xE1BC;</md-icon>
+            <p>Like Pages</p>
+            <div class="md-secondary">20+</div>
+          </md-list-item>
+     </md-list>
+
+  </md-sidenav>
+
+  <!-- Content -->
+  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+    <md-toolbar layout="row" class="md-whiteframe-6dp">
+       <div class="md-toolbar-tools">
+         <md-button class="menu" hide-gt-sm ng-click="toggle()" aria-label="Show Side Bar">
+           <md-icon class="material-icons">menu</md-icon>
+         </md-button>
+         <h1><span>OpenFFS</span></h1>
+         <div class="clock timer" layout="row" layout-align="end"></div>
+       </div>
+    </md-toolbar>
+
+    <md-content layout="row" flex id="content">
+        <div ui-view></div>
+    </md-content>
+
+  </div>
+
+  <!-- other Scripts
+  [TODO] move to seperate file
+  -->
+    <script type="text/javascript">
+  	var clock = $('.clock').FlipClock({
+  		clockFace: 'TwelveHourClock'
+  	});
+  </script>
+</body>
+</html>
