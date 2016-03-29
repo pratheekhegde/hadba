@@ -1,0 +1,13 @@
+#elearning {
+    [ng-click],
+    [data-ng-click],
+    [x-ng-click] {
+        cursor: pointer;
+    }
+    .card-media {
+        height: 90%;
+    }
+    .elearning-card {
+        width: 280px !important;
+    }
+}

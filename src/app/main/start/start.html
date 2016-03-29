@@ -1,0 +1,68 @@
+<div id="elearning" class="page-layout carded fullwidth" layout="row">
+
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg md-accent-bg"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center" layout="column" flex>
+
+        <!-- CONTENT HEADER -->
+        <div class="header">
+            <span class="h1 white-fg">E Learning Resources</span>
+        </div>
+        <!-- / CONTENT HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card" layout="column" flex>
+
+            <!-- CONTENT TOOLBAR -->
+            <div class="toolbar" layout="row" layout-align="end">
+
+                <!-- CLEAR FILTERS BUTTON -->
+                <md-button ng-if="vm.filteringIsOn()" class="md-icon-button" ng-click="vm.clearFilters()" aria-label="Clear Filters">
+                    <md-icon md-font-icon="icon-filter-remove"></md-icon>
+                    <md-tooltip SB.CLEAR_FILTERS>Clear Filters</md-tooltip>
+                </md-button>
+                <!-- / CLEAR FILTERS BUTTON -->
+
+                <!-- FILTERS SIDENAV BUTTON -->
+                <md-button class="md-icon-button" ng-click="vm.toggleSidenav('filters-sidenav')" aria-label="Filter Cards">
+                    <md-icon md-font-icon="icon-filter-variant"></md-icon>
+                    <md-tooltip><span>Filter Cards</span></md-tooltip>
+                </md-button>
+                <!-- / FILTERS SIDENAV BUTTON -->
+
+            </div>
+            <!-- / CONTENT TOOLBAR -->
+
+            <!-- CONTENT -->
+            <md-content class="content md-padding" layout="row" layout-xs="column" layout-wrap layout-align="start" ms-scroll>
+                <md-card class="elearning-card" md-ink-ripple ng-click="vm.showVideo($event,card)" ng-repeat="card in vm.cards | filter: vm.cardFilter">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-title">{{card.resourceName}}</span>
+                            <span class="md-subhead">{{card.description}}</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-md card-media">
+                                <img class="image" ng-src="assets/images/elearning/{{card.image}}" ng-show="card.image">
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                </md-card>
+            </md-content>
+            <!-- / CONTENT -->
+
+        </div>
+        <!-- / CONTENT CARD -->
+
+    </div>
+    <!-- / CENTER -->
+
+    <!-- FILTERS SIDENAV -->
+    <md-sidenav class="filters-sidenav md-sidenav-right" md-component-id="filters-sidenav" ng-include="'app/main/elearning/sidenavs/filters/filters-sidenav.html'" ng-controller="FiltersSidenavController as vm" ms-sidenav-helper>
+    </md-sidenav>
+    <!-- / FILTERS SIDENAV -->
+
+</div>
