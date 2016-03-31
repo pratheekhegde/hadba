@@ -30,15 +30,15 @@ And of course openFFS itself is open source with a [public repository][dill]
 You need Gulp installed globally:
 
 ```sh
-$ npm i -g gulp
+$ npm install -g gulp
 ```
 
 ```sh
 $ git clone [git-repo-url] openFFS
 $ cd openFFS
-$ npm i -d
-$ gulp build --prod
-$ NODE_ENV=production node app
+$ npm install
+$ bower install
+$ gulp serve
 ```
 
 ### Plugins [TODO]
