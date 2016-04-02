@@ -3,16 +3,7 @@
 
   angular
     .module('openffs', [
-      'ngAnimate',
-      'ngCookies',
-      'ngSanitize',
-      'ngMessages',
-      'ngResource',
-      'ui.router',
-      'ngMaterial',
-      'toastr',
-
-      // Modules of the app
+      'app.core',
       'app.navigation',
       'app.toolbar'
     ]);

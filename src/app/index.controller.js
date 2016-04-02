@@ -9,7 +9,7 @@
     /** @ngInject */
     function IndexController()
     {
-        var vm = this;
+        //var vm = this;
 
         // Data
 

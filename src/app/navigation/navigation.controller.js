@@ -7,13 +7,13 @@
         .controller('NavigationController', NavigationController);
 
     /** @ngInject */
-    function NavigationController()
+    function NavigationController($log)
     {
         var vm = this;
 
         // Data
         vm.currentDate = new Date();
-
+        $log.error('apiResolver.resolve requires correct action parameter (ResourceName@methodName)');
 
         // Methods
 
