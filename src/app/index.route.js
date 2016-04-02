@@ -10,7 +10,7 @@
 
     //$locationProvider.html5Mode(true);
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/student/ready');
 
     // State definitions
       $stateProvider

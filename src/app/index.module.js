@@ -5,7 +5,10 @@
     .module('openffs', [
       'app.core',
       'app.navigation',
-      'app.toolbar'
+      'app.toolbar',
+
+      //Main Components
+      'app.student'
     ]);
 
 })();
