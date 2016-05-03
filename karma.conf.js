@@ -17,13 +17,13 @@ function listFiles() {
   });
 
   var patterns = wiredep(wiredepOptions).js
-    .concat([
-      path.join(conf.paths.src, '/app/**/*.module.js'),
-      path.join(conf.paths.src, '/app/**/*.js'),
-      path.join(conf.paths.src, '/**/*.spec.js'),
-      path.join(conf.paths.src, '/**/*.mock.js'),
-    ])
-    .concat(pathSrcHtml);
+      .concat([
+        path.join(conf.paths.src, '/app/**/*.module.js'),
+        path.join(conf.paths.src, '/app/**/*.js'),
+        path.join(conf.paths.src, '/**/*.spec.js'),
+        path.join(conf.paths.src, '/**/*.mock.js'),
+      ])
+      .concat(pathSrcHtml);
 
   var files = patterns.map(function(pattern) {
     return {
@@ -50,7 +50,7 @@ module.exports = function(config) {
 
     ngHtml2JsPreprocessor: {
       stripPrefix: conf.paths.src + '/',
-      moduleName: 'openffs'
+      moduleName: 'generatorGulpAngular'
     },
 
     logLevel: 'WARN',

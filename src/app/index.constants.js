@@ -1,9 +1,7 @@
-/* global moment:false */
-(function() {
-  'use strict';
+(function ()
+{
+    'use strict';
 
-  angular
-    .module('openffs')
-    .constant('moment', moment);
-
+    angular
+        .module('openffs');
 })();

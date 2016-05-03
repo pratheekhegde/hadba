@@ -3,14 +3,17 @@
     'use strict';
 
     angular
-        .module('app.core', [
+        .module('app.core',
+            [
                 'ngAnimate',
+                'ngAria',
                 'ngCookies',
-                'ngSanitize',
                 'ngMessages',
                 'ngResource',
-                'ui.router',
+                'ngSanitize',
                 'ngMaterial',
-                'toastr'
+                'pascalprecht.translate',
+                'ui.router'
+                
             ]);
 })();

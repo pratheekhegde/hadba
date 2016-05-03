@@ -7,6 +7,8 @@
         .config(config);
 
     /** @ngInject */
-    function config()
-    {}
+    function config($translatePartialLoaderProvider)
+    {
+        $translatePartialLoaderProvider.addPart('app/toolbar');
+    }
 })();

@@ -10,7 +10,7 @@
     function config($stateProvider)
     {
         // State
-        $stateProvider.state('app.student.ready',
+        $stateProvider.state('app.student-ready',
         {
             url: '/student/ready',
             views:

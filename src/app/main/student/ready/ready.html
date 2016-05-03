@@ -1,58 +1,35 @@
-<div id="studentlogin" class="flex-scrollable" layout="column" ms-scroll>
-    <div id="studentlogin-form-wrapper" layout="column" layout-align="center center">
-        <div id="studentlogin-form" class="md-whiteframe-8dp">
-            <div class="logo">
-                <img src="assets/images/logos/hex.png" class="hugeImg negativeMargin" />
-            </div>
+<div class="page-layout carded fullwidth" layout="row">
 
-            <div class="title">Log in to your account</div>
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg md-light-green-A700-bg"></div>
+    <!-- / TOP BACKGROUND -->
 
-            <div class="separator">
-                <span class="text">USING</span>
-            </div>
+    <!-- CENTER -->
+    <div class="center" layout="column" flex>
 
-            <md-button ng-click="authenticate('google')" class="md-raised google">
-                <div layout="row" layout-align="center center">
-                    <span>
-                    <md-icon md-font-icon="icon-google-plus" class="s16"></md-icon>
-                    <span>Log in with Google</span>
-                    </span>
-                </div>
-            </md-button>
-            <!--
-            <md-button class="md-raised github">
-                <div layout="row" layout-align="center center">
-                    <span>
-                        <md-icon md-font-icon="icon-github" class="s16"></md-icon>
-                        <span ng-click="authenticate('github')" >Log in with Github</span>
-                    </span>
-                </div>
-            </md-button>
-            <md-button class="md-raised facebook">
-                <div layout="row" layout-align="center center">
-                    <span>
-                    <md-icon md-font-icon="icon-facebook" class="s16"></md-icon>
-                    <span >Log in with Facebook</span>
-                    </span>
-                </div>
-            </md-button>
-
-            <md-button class="md-raised linkedin">
-                <div layout="row" layout-align="center center">
-                    <span>
-                        <md-icon md-font-icon="icon-linkedin" class="s16"></md-icon>
-                        <span ng-click="authenticate('linkedin')" >Log in with Linkedin</span>
-                    </span>
-                </div>
-            </md-button>
-            -->
-            <div class="register" layout="row" layout-sm="column" layout-align="center center">
-                <a class="link" ng-href="" ng-click="vm.cancel()">Go Back</a>
-                <div class="separator">
-                </div>
-                <a class="link" ng-href="/">Go Home</a>
-            </div>
-
+        <!-- CONTENT HEADER -->
+        <div class="header" align="center">
+            <h1 class="md-display-1">Online Faculty Feedback</h1>
         </div>
+        <!-- / CONTENT HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card" layout="column">
+
+          <!-- CONTENT -->
+          <div flex>
+            <md-content class="content" flex ms-scroll layout-padding layout-margin>
+              <md-progress-linear md-mode="query"></md-progress-linear>
+              <p class="md-body-2" align="center">Give us a moment, we are getting ready.</p>
+              <md-divider></md-divider>
+              <div class="md-caption" align="center">Contributed by CSE batch of 2012.</div>
+            </md-content>
+            <!-- / CONTENT -->
+          </div>
+        </div>
+        <!-- / CONTENT CARD -->
+
     </div>
+    <!-- / CENTER -->
+
 </div>

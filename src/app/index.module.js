@@ -1,14 +1,29 @@
-(function() {
-  'use strict';
+(function ()
+{
+    'use strict';
 
-  angular
-    .module('openffs', [
-      'app.core',
-      'app.navigation',
-      'app.toolbar',
+    /**
+     * Main module of the Fuse
+     */
+    angular
+        .module('openffs', [
 
-      //Main Components
-      'app.student'
-    ]);
+            // Core
+            'app.core',
 
+            // Navigation
+            'app.navigation',
+
+            // Toolbar
+            'app.toolbar',
+
+            // Quick panel
+          //  'app.quick-panel',
+
+            // Sample
+            'app.sample',
+
+            // Student Module
+            'app.student'
+        ]);
 })();

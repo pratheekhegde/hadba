@@ -13,12 +13,20 @@
           "module": "ngCookies"
         },
         {
+          "key": "touch",
+          "module": "ngTouch"
+        },
+        {
           "key": "sanitize",
           "module": "ngSanitize"
         },
         {
           "key": "messages",
           "module": "ngMessages"
+        },
+        {
+          "key": "aria",
+          "module": "ngAria"
         }
       ],
       "jQuery": {
@@ -33,8 +41,8 @@
         "module": "ui.router"
       },
       "ui": {
-        "key": "angular-material",
-        "module": "ngMaterial"
+        "key": "noUI",
+        "module": null
       },
       "cssPreprocessor": {
         "key": "node-sass",
