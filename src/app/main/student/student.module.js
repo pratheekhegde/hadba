@@ -4,7 +4,8 @@
 
     angular
         .module('app.student', [
-          'app.student.ready'
+          'app.student.ready',
+          'app.student.start'
     ])
         .config(config);
 
