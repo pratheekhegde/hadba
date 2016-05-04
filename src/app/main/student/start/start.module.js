@@ -13,6 +13,7 @@
         $stateProvider.state('app.student-start',
         {
             url: '/student/start',
+            data : { pageTitle: 'Start Feedback' },
             views:
             {
                 'content@app':

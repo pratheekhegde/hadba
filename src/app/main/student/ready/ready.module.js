@@ -13,6 +13,7 @@
         $stateProvider.state('app.student-ready',
         {
             url: '/student/ready',
+            data : { pageTitle: 'Ready' },
             views:
             {
                 'content@app':
