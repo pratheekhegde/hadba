@@ -23,27 +23,27 @@
       <!-- / CONTENT TOOLBAR -->
 
       <!-- CONTENT -->
-        <md-content class="content" flex ms-scroll>
-          <div layout="row" layout-wrap layout-align="center">
-            <md-card ng-mouseenter="hover = 'md-whiteframe-z3'" ng-mouseleave= "hover =''" ng-class="hover" ng-repeat='subject in vm.timetable' style="width: 300px;">
-              <md-card-title>
-                <md-card-title-text>
-                  <span class="md-body-2">{{subject.sub_name}}</span>
-                  <span class="md-body-1">{{subject.emp_name}}</span>
-                </md-card-title-text>
-                <md-card-title-media>
-                  <div class="md-media-sm card-media">
-                      <md-icon md-font-icon="icon-library-books" class="md-accent md-card-image s80"></md-icon>
-                  </div>
-                </md-card-title-media>
-              </md-card-title>
-              <md-card-actions layout="row" layout-align="end center">
-              <md-button>Open Form</md-button>
-              </md-card-actions>
-            </md-card>
-          </div>
-        </md-content>
-        <!-- / CONTENT -->
+      <md-content class="content" flex ms-scroll>
+        <div layout="row" layout-wrap layout-align="center">
+          <md-card ng-mouseenter="hover = 'md-whiteframe-z3'" ng-mouseleave="hover =''" ng-class="hover" ng-repeat='subject in vm.timetable' style="width: 300px;">
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-body-2">{{subject.sub_name}}</span>
+                <span class="md-body-1">{{subject.emp_name}}</span>
+              </md-card-title-text>
+              <md-card-title-media>
+                <div class="md-media-sm card-media">
+                  <md-icon md-font-icon="icon-library-books" class="md-accent md-card-image s80"></md-icon>
+                </div>
+              </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+              <md-button ui-sref="app.student-feedback({subject : subject, class_name : vm.sessionClassName})">Open Form</md-button>
+            </md-card-actions>
+          </md-card>
+        </div>
+      </md-content>
+      <!-- / CONTENT -->
     </div>
     <!-- / CONTENT CARD -->
 

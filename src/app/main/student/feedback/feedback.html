@@ -1,0 +1,54 @@
+<div class="page-layout simple fullwidth">
+
+  <!-- HEADER -->
+  <div class="content">
+    <div class="simple-table-container md-whiteframe-4dp" align="center">
+      <img src="assets/images/backgrounds/coll_header.jpg">
+      <div class="md-title">Online Student Evaluation of Faculty</div>
+      <md-divider></md-divider>
+    </div>
+  </div>
+  <!-- / HEADER -->
+
+  <!-- CONTENT -->
+  <div class="content" md-background-bg>
+
+    <!-- DEMO CONTENT -->
+    <div class="simple-table-container md-whiteframe-4dp">
+      <div class="table-title">
+        <span ng-bind="vm.subject.emp_name"></span> - <span ng-bind="vm.subject.sub_name"></span>
+      </div>
+
+      <table class="simple" ms-responsive-table>
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th class="">Mark</th>
+          </tr>
+        </thead>
+
+        <tfoot>
+          <tr>
+            <td></td>
+          </tr>
+        </tfoot>
+
+        <tbody>
+          <tr ng-repeat="question in vm.questions">
+            <td class="md-body-2">{{question.q_num + '. ' +question.question}}</td>
+            <td>
+              <div layout>
+                <md-slider flex md-discrete ng-model="vm.marks['Q'+question.q_num]" step="1" min="1" max="5" aria-label="rating"></md-slider>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      {{vm.marks | json}}
+    </div>
+    <!-- / DEMO CONTENT -->
+
+  </div>
+  <!-- / CONTENT -->
+
+</div>

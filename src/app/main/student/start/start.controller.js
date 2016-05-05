@@ -14,18 +14,12 @@
         positionClass: "toast-bottom-left",
         timeOut: 10000
       })
-      toastr.info('Comments have been discontinued.', 'This is sad', {
-        positionClass: "toast-bottom-left",
-        timeOut: 10000
-      })
     });
-
-
 
     // Data
     vm.timetable = Timetable.timetable;
     vm.sessionClassName = Timetable.class_name;
-    
+
     // Methods
 
     //
