@@ -6,7 +6,7 @@
     .controller('StudentStartController', StudentStartController);
 
   /** @ngInject */
-  function StudentStartController($state, $mdToast, api) {
+  function StudentStartController($state, $mdToast, api, Timetable) {
     var vm = this;
 
     angular.element(document).ready(function() {
@@ -23,7 +23,8 @@
 
 
     // Data
-
+    vm.timetable = Timetable;
+    console.log(vm.timetable);
     // Methods
 
     //
