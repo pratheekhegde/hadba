@@ -23,8 +23,9 @@
 
 
     // Data
-    vm.timetable = Timetable;
-    console.log(vm.timetable);
+    vm.timetable = Timetable.timetable;
+    vm.sessionClassName = Timetable.class_name;
+    
     // Methods
 
     //
