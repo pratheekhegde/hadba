@@ -1,23 +1,18 @@
 <div layout="row" layout-align="start center">
-    <div layout="row" layout-align="start center" flex>
-        <md-button id="navigation-toggle" class="md-icon-button" ng-click="vm.toggleSidenav('navigation')"
-                   hide-gt-sm aria-label="Toggle navigation" translate
-                   translate-attr-aria-label="TOOLBAR.TOGGLE_NAVIGATION">
-            <md-icon md-font-icon="icon-menu" class="icon"></md-icon>
-        </md-button>
+  <div layout="row" layout-align="start center" flex>
+    <md-button id="navigation-toggle" class="md-icon-button" ng-click="vm.toggleSidenav('navigation')" hide-gt-sm aria-label="Toggle navigation" translate translate-attr-aria-label="TOOLBAR.TOGGLE_NAVIGATION">
+      <md-icon md-font-icon="icon-menu" class="icon"></md-icon>
+    </md-button>
 
-        <md-progress-circular id="toolbar-progress" ng-if="$root.loadingProgress" class="md-accent"
-                              md-mode="indeterminate" md-diameter="64">
-        </md-progress-circular>
-    </div>
+    <md-progress-circular id="toolbar-progress" ng-if="$root.loadingProgress" class="md-accent" md-mode="indeterminate" md-diameter="64">
+    </md-progress-circular>
+  </div>
+  <div layout="row" layout-align="start center">
+    <span layout-margin ng-bind="(vm.clock | date:'medium')"></span>
+    <div class="toolbar-separator"></div>
 
-    <div layout="row" layout-align="start center">
-
-        <div class="toolbar-separator"></div>
-
-        <md-button id="quick-panel-toggle" class="md-icon-button" ng-click="vm.toggleSidenav('quick-panel')"
-                   aria-label="Toggle quick panel" translate translate-attr-aria-label="TOOLBAR.TOGGLE_QUICK_PANEL">
-            <md-icon md-font-icon="icon-format-list-bulleted" class="icon"></md-icon>
-        </md-button>
-    </div>
+    <md-button id="quick-panel-toggle" class="md-icon-button" ng-click="vm.toggleSidenav('quick-panel')" aria-label="Toggle quick panel" translate translate-attr-aria-label="TOOLBAR.TOGGLE_QUICK_PANEL">
+      <md-icon md-font-icon="icon-format-list-bulleted" class="icon"></md-icon>
+    </md-button>
+  </div>
 </div>
