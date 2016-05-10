@@ -1,52 +1,96 @@
-<div class="page-layout simple fullwidth">
-
-  <!-- HEADER -->
-  <div class="content">
-    <div class="simple-table-container md-whiteframe-4dp" align="center">
-      <img src="assets/images/backgrounds/coll_header.jpg">
-      <div class="md-title">Online Student Evaluation of Faculty</div>
-      <md-divider></md-divider>
-    </div>
-  </div>
-  <!-- / HEADER -->
-
+<div id="feedback" class="page-layout simple fullwidth">
   <!-- CONTENT -->
   <div class="content" md-background-bg>
 
-    <!-- DEMO CONTENT -->
-    <div class="simple-table-container md-whiteframe-4dp">
-      <div class="table-title">
-        <span ng-bind="vm.subject.emp_name"></span> - <span ng-bind="vm.subject.sub_name"></span>
+    <div class="simple-table-container md-whiteframe-4dp" layout-margin layout-padding>
+      <div class="header" layout="row" layout-xs="column" layout-align="space-between start">
+        <div class="college-info" layout="column">
+          <div layout="row" class="college" layout-align="start center">
+            <img src="assets/images/logos/smvitmlogo.png">
+
+            <div class="divider"></div>
+
+            <div class="detail">
+              <div class="title">SMVITM</div>
+              <div class="address">Bantakal, Udupi, KA</div>
+              <div class="phone">0820-125468</div>
+              <div class="email">admin@sode-edu.org</div>
+              <div class="website">www.sode-edu.org</div>
+            </div>
+          </div>
+        </div>
+        <div layout="column">
+          <table class="summary">
+            <tr class="code">
+              <td class="label">Online
+                <br>Evaluation</td>
+              <td class="value">Student
+                <br>of Faculty</td>
+            </tr>
+            <tr>
+              <td class="label">Class</td>
+              <td class="value" ng-bind="vm.class_name"></td>
+            </tr>
+            <tr>
+              <td class="label">Faculty Name</td>
+              <td class="value" ng-bind="vm.subject.emp_name"></td>
+            </tr>
+            <tr>
+              <td class="label">Subject Name</td>
+              <td class="value" ng-bind="vm.subject.sub_name"></td>
+            </tr>
+          </table>
+        </div>
       </div>
 
-      <table class="simple" ms-responsive-table>
-        <thead>
-          <tr>
-            <th>Question</th>
-            <th class="">Mark</th>
-          </tr>
-        </thead>
+      <div class="footer">
+        <div layout="row" layout-align="start start">
+          <div class="logo md-primary-bg" layout="row" layout-align="center center">
+            <div>Note</div>
+          </div>
+          <div class="small-note">
+            All questions are compulsory. Click and drag the slider to give mark on a scale of 1 to 5.
+            <br>
+            <b>1 - Strongly Disagree<br>
+            <b>2 - Disagree<br>
+            <b>3 - Neither Agree or Disagree<br>
+            <b>4 - Agree<br>
+            <b>5 - Strongly Agree</div>
+        </div>
+      </div>
 
-        <tfoot>
-          <tr>
-            <td></td>
-          </tr>
-        </tfoot>
+      <form name="feedbackForm" novalidate>
+        <table class="simple" ms-responsive-table>
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Mark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="question in vm.questions">
+              <td class="md-body-2">{{question.q_num + '. ' +question.question}}</td>
+              <td>
+                <div layout>
+                  <md-slider flex md-discrete ng-model="vm.feedbackForm.marks['Q'+question.q_num]" step="1" min="1" max="5" aria-label="rating" required></md-slider>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-        <tbody>
-          <tr ng-repeat="question in vm.questions">
-            <td class="md-body-2">{{question.q_num + '. ' +question.question}}</td>
-            <td>
-              <div layout>
-                <md-slider flex md-discrete ng-model="vm.marks['Q'+question.q_num]" step="1" min="1" max="5" aria-label="rating"></md-slider>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      {{vm.marks | json}}
+        <section layout="row" layout-align="center center" layout-wrap>
+          <md-button class="md-raised md-primary" ng-disabled="feedbackForm.$invalid || feedbackForm.$pristine">Submit
+            <md-tooltip md-direction="down">Save feedback</md-tooltip>
+          </md-button>
+      </form>
+
+      <md-button ui-sref="app.student-start" class="md-raised md-warn">Back
+        <md-tooltip md-direction="down">Choose other subject</md-tooltip>
+      </md-button>
+      </section>
+      {{vm.feedbackForm.marks | json}}
     </div>
-    <!-- / DEMO CONTENT -->
 
   </div>
   <!-- / CONTENT -->

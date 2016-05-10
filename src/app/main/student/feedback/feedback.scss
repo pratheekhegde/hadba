@@ -1,0 +1,70 @@
+#feedback {
+  padding: 0;
+  overflow: auto;
+  .content {
+    .simple-table-container {
+      .header {
+          padding: 15px;
+        .college-info {
+          line-height: 22px;
+          color: rgba(0, 0, 0, 0.54);
+          .detail {
+            width: 160px;
+          }
+          .college{
+            .logo {
+              font-size: 115px;
+            }
+          }
+          .divider {
+            width: 1px;
+            margin: 0 48px;
+            background-color: rgba(0, 0, 0, 0.12);
+            height: 144px;
+          }
+        }
+        .summary {
+          font-size: 15px;
+          .label {
+            color: rgba(0, 0, 0, 0.54);
+            text-align: right;
+            padding-right: 16px;
+          }
+          .value {
+            color: rgba(0, 0, 0, 1);
+          }
+          .code {
+            font-size: 35px;
+            font-weight: 300;
+            td {
+              padding-bottom: 32px;
+            }
+          }
+        }
+      }
+      .footer {
+        // IE10 fix
+        .logo,
+        .small-note {
+          -ms-flex: 0 1 auto;
+        }
+        .logo {
+          width: 64px;
+          min-width: 64px;
+          height: 32px;
+          font-size: 17px;
+          font-weight: 500;
+          margin-right: 24px;
+          border-radius: 2px;
+          overflow: hidden;
+        }
+        .small-note {
+          font-size: 12px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.54);
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

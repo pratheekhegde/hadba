@@ -20,6 +20,21 @@
     }, {
       "q_num": "2",
       "question": "Objectives and plan of the course were specified clearly."
+    }, {
+      "q_num": "3",
+      "question": "Possesses good teaching skills and gives clear explanations."
+    }, {
+      "q_num": "4",
+      "question": "Possesses good communication skills."
+    }, {
+      "q_num": "5",
+      "question": "Has good knowledge of the subject and answers any questions."
+    }, {
+      "q_num": "6",
+      "question": "Comes prepared for the class and doesn’t get upset by questions."
+    }, {
+      "q_num": "7",
+      "question": "Motivates the students to learn more about the subject."
     }]
 
     // Methods
