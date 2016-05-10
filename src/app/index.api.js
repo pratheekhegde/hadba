@@ -188,7 +188,8 @@
         api.student = {
           getFeedbackSessionStatus  : $resource(api.baseUrl + 'session-status'),
           getFeedbackSessionClass   : $resource(api.baseUrl + 'session-class'),
-          getClassTimetable         : $resource(api.baseUrl + 'timetable/:class_code', {class_code: '@class_code'})
+          getClassTimetable         : $resource(api.baseUrl + 'timetable/:class_code', {class_code: '@class_code'}),
+          sendFeedback              : $resource(api.baseUrl + 'feedback')
         }
         return api;
     }

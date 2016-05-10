@@ -59,7 +59,7 @@
         </div>
       </div>
 
-      <form name="feedbackForm" novalidate>
+      <form name="feedbackForm" ng-submit="vm.submitFeedbackForm()" ng-model="vm.feedbackForm" novalidate>
         <table class="simple" ms-responsive-table>
           <thead>
             <tr>
@@ -80,7 +80,7 @@
         </table>
 
         <section layout="row" layout-align="center center" layout-wrap>
-          <md-button class="md-raised md-primary" ng-disabled="feedbackForm.$invalid || feedbackForm.$pristine">Submit
+          <md-button type="submit" class="md-raised md-primary" ng-disabled="feedbackForm.$invalid || feedbackForm.$pristine">Save
             <md-tooltip md-direction="down">Save feedback</md-tooltip>
           </md-button>
       </form>
@@ -89,7 +89,6 @@
         <md-tooltip md-direction="down">Choose other subject</md-tooltip>
       </md-button>
       </section>
-      {{vm.feedbackForm.marks | json}}
     </div>
 
   </div>
