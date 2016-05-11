@@ -25,7 +25,7 @@
       <!-- CONTENT -->
       <md-content class="content" flex ms-scroll>
         <div layout="row" layout-wrap layout-align="center">
-          <md-card ng-mouseenter="hover = 'md-whiteframe-z3'" ng-mouseleave="hover =''" ng-class="hover" ng-repeat='subject in vm.timetable' style="width: 300px;">
+          <md-card ng-mouseenter="hover = 'md-whiteframe-z3'" ng-mouseleave="hover =''" ng-class="hover" ng-repeat='subject in vm.timetable' ng-show='!subject.feedback_given' style="width: 300px;">
             <md-card-title>
               <md-card-title-text>
                 <span class="md-body-2">{{subject.sub_name}}</span>
