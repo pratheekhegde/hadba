@@ -17,15 +17,17 @@
     <div class="content-card" layout="column">
 
       <!-- CONTENT TOOLBAR -->
-      <div class="toolbar" layout="row" layout-align="end center">
-        <span class="md-subhead" ng-bind="vm.sessionClassName"></span>
+      <div class="toolbar" layout="row" layout-align="space-between center">
+        <div class="md-subhead">Total Subjects : {{vm.timetable.length}}</div>
+        <div class="md-subhead"><b>Class : </b><span ng-bind="vm.sessionClassName"></span></div>
+        <div class="md-subhead">Remaining Subjects : {{(vm.timetable | filter: {feedback_given:false}).length}}</div>
       </div>
       <!-- / CONTENT TOOLBAR -->
 
       <!-- CONTENT -->
       <md-content class="content" flex ms-scroll>
         <div layout="row" layout-wrap layout-align="center">
-          <md-card ng-mouseenter="hover = 'md-whiteframe-z3'" ng-mouseleave="hover =''" ng-class="hover" ng-repeat='subject in vm.timetable' ng-show='!subject.feedback_given' style="width: 300px;">
+          <md-card ng-mouseenter="hover = 'md-whiteframe-z3'" ng-mouseleave="hover =''" ng-class="hover" ng-repeat='subject in vm.timetable | filter:{feedback_given:false}' style="width: 300px;">
             <md-card-title>
               <md-card-title-text>
                 <span class="md-body-2">{{subject.sub_name}}</span>
