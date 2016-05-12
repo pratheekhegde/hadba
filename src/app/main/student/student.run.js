@@ -6,9 +6,9 @@
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock($rootScope, $timeout, $state, $window, api) {
+  function runBlock($rootScope, $timeout, $state, $stateParams, $window, api) {
     // On state change check if session is running or not
-    $rootScope.$on('$stateChangeStart', function() {
+    $rootScope.$on('$stateChangeStart', function(event, toState) {
       // Get the FeedbackSessionStatus
       api.student.getFeedbackSessionStatus.get({},
         // Success
@@ -19,6 +19,13 @@
             //redirect to ready page
             $state.go('app.student-ready');
           } else if (response.status == 1) {
+
+            // If finish state is called manually redirect him to start page
+            if ((toState.name === "app.student-finish") && $stateParams.feedback_finished !== true) {
+              event.preventDefault();
+              $state.go('app.student-start');
+            }
+
             //Get FeedbackSessionClass
             api.student.getFeedbackSessionClass.get({},
               // Success
