@@ -1,6 +1,6 @@
-# openFFS
+# Hadba (Formerly openFFS)
 
-openFFS is a WebApp for collecting semester wise feedbacks from the students
+Hadba is a WebApp for collecting semester wise feedbacks from the students
   - Add Faculty and subject information
   - Feed the timetable of each class
   - Conduct feedback of sessions of each class
@@ -11,7 +11,7 @@ openFFS is a WebApp for collecting semester wise feedbacks from the students
 
 ### Tech
 
-openFFS uses a number of open source projects to work properly:
+Hadba uses a number of open source projects to work properly:
 
 * [AngularJS] - HTML enhanced for web apps!
 * [Gulp] - the streaming build system
@@ -26,7 +26,7 @@ $ npm install -g gulp
 ```
 
 ```sh
-$ git clone [git-repo-url] openFFS
+$ git clone [git-repo-url] hadba
 $ cd openFFS
 $ npm install
 $ bower install
